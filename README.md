@@ -65,4 +65,4 @@ build profile, or on the command line.
 
 License
 -------
-* This software is in the public domain (The contents of this project have beed taken from jboss-parent and adapted for Blazebit)
+* This software is in the public domain (The contents of this project have been taken from jboss-parent and adapted for Blazebit)
