@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.blazebit</groupId>
-    <version>1-SNAPSHOT</version>
+    <version>1</version>
     <artifactId>blazebit-parent</artifactId>
 
     <packaging>pom</packaging>
