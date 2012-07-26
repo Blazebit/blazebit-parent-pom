@@ -638,14 +638,14 @@
 
     <distributionManagement>
         <repository>
-            <id>fakerepo</id>
-            <name>Local file system</name>
-            <url>file:///d:/repo/releases</url>
+            <id>sonatype-releases</id>
+            <name>Sonatype Release Repository</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
         </repository>
         <snapshotRepository>
-            <id>fakesnapshotrepo</id>
-            <name>Local file system</name>
-            <url>file:///d:/repo/snapshots</url>
+            <id>sonatype-snapshots</id>
+            <name>Sonatype Snapshot Repository</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
     </distributionManagement>
 </project>
