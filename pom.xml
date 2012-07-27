@@ -601,21 +601,8 @@
                                 </goals>
                             </execution>
                         </executions>
-                    </plugin>          
-                </plugins>
-            </build>
-        </profile>
-
-        <!-- 
-            This profile can be activated to generate gpg signatures for all build 
-            artifacts.  This profile requires that the properties "gpg.keyname" 
-            and "gpg.passphrase" are available to the current build.
-        -->
-        <profile>
-            <id>gpg-sign</id>
-            <build>
-                <plugins>
-                    <!-- This will sign the artifact, the POM, and all attached artifacts -->
+                    </plugin>     
+					<!-- This will sign the artifact, the POM, and all attached artifacts -->
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
@@ -637,15 +624,15 @@
     </profiles>
 
     <distributionManagement>
-        <repository>
-            <id>sonatype-releases</id>
-            <name>Sonatype Release Repository</name>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
-        </repository>
-        <snapshotRepository>
-            <id>sonatype-snapshots</id>
-            <name>Sonatype Snapshot Repository</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
+		<snapshotRepository>
+			<id>sonatype-nexus-snapshots</id>
+			<name>Sonatype Nexus Snapshots</name>
+			<url>${sonatypeOssDistMgmtSnapshotsUrl}</url>
+		</snapshotRepository>
+		<repository>
+			<id>sonatype-nexus-staging</id>
+			<name>Nexus Release Repository</name>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		</repository>
+	</distributionManagement>
 </project>
