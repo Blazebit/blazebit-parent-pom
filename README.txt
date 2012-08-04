@@ -3,7 +3,8 @@ Blazebit Parent POM
 The parent POM for Blazebit community projects.
 
 What is it?
------------
+===========
+
 The Blazebit parent POM provides default configuration for Blazebit Maven builds.
  
 * Default versions for the most commonly used Maven plugins
@@ -11,7 +12,8 @@ The Blazebit parent POM provides default configuration for Blazebit Maven builds
 * Profiles for generating source jars, and enforcing a minimum Maven version
 
 How to use it?
---------------
+==============
+
 Start out by adding the parent configuration to your pom.
 
     <parent>
@@ -39,7 +41,8 @@ Note the default level is 1.6.
 For the full list of properties, refer to the POM itself.
 
 The Release Profile
---------------------
+===================
+
 This POM includes a Maven profile called "blazebit-release".  This profile includes 
 settings for release deployment metadata and generating javadoc jar files.  The 
 maven release plugin will automatically activate this profile during a release.  
@@ -47,7 +50,8 @@ Projects that do not use the maven release plugin must manually activate this
 profile during a release using "-Pblazebit-release", or something similar.
 
 The GPG Sign Profile
---------------------
+====================
+
 This POM includes a Maven profile called "gpg-sign" which provides default 
 configuration to generate GPG signatures for the build artifacts.  This plugin 
 requires that the properties "gpg.keyname" and "gpg.passphrase" are available to 
@@ -64,5 +68,9 @@ build profile, or on the command line.
     </profile>
 
 License
--------
+=======
+
+This distribution, as a whole, is licensed under the terms of the Apache
+License, Version 2.0 (see LICENSE.txt).
+
 * This software is in the public domain (The contents of this project have been taken from jboss-parent and adapted for Blazebit)

@@ -132,21 +132,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-assembly-plugin</artifactId>
-                    <version>${version.assembly-plugin}</version>
-                    <executions>
-                        <execution>
-                            <id>assemble-zip</id>
-                            <phase>package</phase>
-                            <goals>
-                                <goal>single</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                    <configuration>
-                        <descriptors>
-                            <descriptor>maven-assembly-dist.xml</descriptor>
-                        </descriptors>
-                    </configuration>
+                    <version>${version.assembly.plugin}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
@@ -615,7 +601,13 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
-                <version>2.3</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>${project.groupId}</groupId>
+                        <artifactId>dist-assembly-descriptor</artifactId>
+                        <version>1.0-SNAPSHOT</version>
+                    </dependency>
+                </dependencies>
                 <executions>
                     <execution>
                         <id>assemble-zip</id>
@@ -623,13 +615,13 @@
                         <goals>
                             <goal>single</goal>
                         </goals>
+                        <configuration>
+                            <descriptorRefs>
+                                <descriptorRef>dist</descriptorRef>
+                            </descriptorRefs>
+                        </configuration>
                     </execution>
                 </executions>
-                <configuration>
-                    <descriptors>
-                        <descriptor>maven-assembly-dist.xml</descriptor>
-                    </descriptors>
-                </configuration>
             </plugin>
         </plugins>
 
