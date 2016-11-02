@@ -1,5 +1,5 @@
 Blazebit Parent POM
-================
+===================
 The parent POM for Blazebit community projects.
 
 What is it?
@@ -19,7 +19,7 @@ Start out by adding the parent configuration to your pom.
     <parent>
       <groupId>com.blazebit</groupId>
       <artifactId>blazebit-parent</artifactId>
-      <version>1</version>
+      <version>9</version>
     </parent>
 
 Depending on the needs of your build, you can customize the plugins and other 
