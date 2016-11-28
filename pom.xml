@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.blazebit</groupId>
-	<version>10-SNAPSHOT</version>
+	<version>10</version>
 	<artifactId>blazebit-parent</artifactId>
 
 	<packaging>pom</packaging>
@@ -34,7 +34,7 @@
 		<connection>scm:git:git@github.com:Blazebit/blazebit-parent-pom.git</connection>
 		<developerConnection>scm:git:git@github.com:Blazebit/blazebit-parent-pom.git</developerConnection>
 		<url>git@github.com:Blazebit/blazebit-parent-pom.git</url>
-	  <tag>HEAD</tag>
+	  <tag>10</tag>
   </scm>
 
 	<developers>
